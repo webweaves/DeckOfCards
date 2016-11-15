@@ -1,25 +1,32 @@
 package com.csw.deck;
 
-public class DeckTest {
+import static org.junit.Assert.assertEquals;
 
-	public static void main(String[] args) {
+import org.junit.Test;
+
+public class DeckTest {
+	
+	@Test
+	public void checkDeckSize() {
 		Deck deck = new Deck();
-		
-		deck.dumpDeck();
-		
+		assertEquals(deck.getCards().size(), 52);
+	}
+	
+	@Test
+	public void checkShuffleDeck() {
+/*		
+ * 		Work in progress		
+ * 
+ * 		Deck deck = new Deck();
 		deck.shuffle();
-		
-		System.out.println("");
-		
-		deck.dumpDeck();
-		
-		System.out.println("");
-			
-		while (deck.getCards().size() != 0) {
-			Card c = deck.popCard();
-			System.out.println("Popped " + c);
-			deck.dumpDeck();
-			System.out.println("");
-		}
+		Card card1 = deck.dealCard();
+		Card card2 = deck.dealCard();
+		deck.removeCards(47);
+		Card card3 = deck.dealCard();
+		Card card4 = deck.dealCard();
+		assertNotSame(card1, new Card(CardValue.TWO, Suit.CLUB));*/
+	}
+	
+	public static void main(String[] args) {
 	}
 }

@@ -22,8 +22,14 @@ public class Deck {
 		Collections.shuffle((List<Card>) cards);
 	}
 	
-	public Card popCard() {
+	public Card dealCard() {
 		return (Card)((List<Card>)cards).remove(0);
+	}
+	
+	public void removeCards(Integer numberOfCardsToRemove) {
+		for (int idx=0; idx<=numberOfCardsToRemove; idx++) {
+			dealCard();
+		}
 	}
 	
 	public void dumpDeck() {
