@@ -1,7 +1,7 @@
 package com.csw.deck;
 
 public enum Suit {
-	CLUB("C"), DIAMONDS("D"), HEARTS("H"), SPADES("S");
+	CLUBS("C"), DIAMONDS("D"), HEARTS("H"), SPADES("S");
 	
 	private String suit;
 	

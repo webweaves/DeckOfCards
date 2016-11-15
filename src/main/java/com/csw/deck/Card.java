@@ -11,6 +11,12 @@ public class Card {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return toString().equals(obj.toString());
+	}
+	
+	@Override
 	public String toString() {
 		return "" + cardValue + suit;
 	}
