@@ -10,12 +10,20 @@ public class Deck {
 	private Collection<Card> cards;
 	
 	public Deck() {
+		reset();
+	}
+	
+	/**
+	 * reset the deck and shuffle it
+	 */
+	public void reset() {
 		cards = new ArrayList<Card>();
 		for (Suit s: Suit.values()) {
 			for (CardValue c: CardValue.values()) {
 				cards.add(new Card(c, s));
 			}
 		}
+		shuffle();
 	}
 
 	public void shuffle() {
